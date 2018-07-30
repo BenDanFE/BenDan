@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Layout>
+      <Menu mode="horizontal" theme="light" active-name="1" :style="{position: 'fixed', width: '100%'}">
+        <div class="layout-logo">
+          <div>Bendan</div>
+        </div>
+        <div class="layout-nav">
+          <MenuItem name="1"> 文章
+          </MenuItem>
+          <MenuItem name="2"> 分类
+          </MenuItem>
+          <MenuItem name="3"> 归档
+          </MenuItem>
+          <MenuItem name="4"> 留言
+          </MenuItem>
+        </div>
+        <div class="layout-right">
+          <a href="#">登录</a> or <a href="#">注册</a>
+        </div>
+      </Menu>
+      <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
+        <router-view/>
+      </Content>
+      <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+    </Layout>
   </div>
 </template>
 
 <style lang="less">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .layout-logo {
+    font-size: 22px;
+    width: 100px;
+    float: left;
+    margin-left: 20px;
   }
-}
+  .layout-right {
+    float: right;
+    margin-right: 20px;
+  }
 </style>
