@@ -14,7 +14,7 @@
           </MenuItem>
         </div>
         <div class="layout-right">
-          <router-link to="/signin">登陆</router-link> or <a href="#">注册</a>
+          <router-link to="/signin">登陆</router-link> or <router-link to="/signup">注册</router-link> 
         </div>
       </Menu>
 </template>
