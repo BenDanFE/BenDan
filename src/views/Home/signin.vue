@@ -15,7 +15,6 @@
                             <FormItem label="密码">
                                 <Input type="password" prefix ="ios-lock-outline"></Input>
                             </FormItem>
-                            <Button type="primary" long>单击进行人机验证</Button>
                            <div class="bd-sign-main-aside-tip">
                              <Button type="success" long>登录</Button>
                            </div>
